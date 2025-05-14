@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos Internos - Programação</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1a237e;
+            --secondary-color: #f9a826;
+            --text-color: #333;
+            --light-bg: #f5f5f5;
+            --card-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--secondary-color);
+            display: inline-block;
+        }
+
+        .title-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .programacao-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .dia {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+            overflow: hidden;
+        }
+
+        .dia-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .atividades {
+            padding: 1rem;
+        }
+
+        .atividade {
+            display: flex;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #eee;
+            padding: 1rem 0;
+        }
+
+        .atividade:last-child {
+            border-bottom: none;
+        }
+
+        .horario {
+            flex: 0 0 20%;
+            font-weight: bold;
+        }
+
+        .esporte {
+            flex: 0 0 30%;
+            color: var(--primary-color);
+        }
+
+        .local {
+            flex: 0 0 30%;
+        }
+
+        .equipes {
+            flex: 0 0 20%;
+            color: var(--secondary-color);
+        }
+
+        .sport-icon {
+            margin-right: 5px;
+            color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .atividade {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .horario, .esporte, .local, .equipes {
+                flex: 0 0 100%;
+            }
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        .return-link {
+            display: block;
+            text-align: center;
+            margin-top: 2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .return-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jogos Internos 2025</h1>
+        <p>Programação Completa dos Jogos</p>
+    </header>
+
+    <div class="container">
+        <div class="title-container">
+            <h2 class="section-title">Programação Detalhada</h2>
+        </div>
+
+        <div class="programacao-container">
+            <div class="dia">
+                <div class="dia-header">Dia 1 - Segunda-feira (10/06/2025)</div>
+                <div class="atividades">
+                    <div class="atividade">
+                        <div class="horario">8:00 - 10:00</div>
+                        <div class="esporte"><i class="fas fa-basketball-ball sport-icon"></i>Basquete</div>
+                        <div class="local">Quadra Principal</div>
+                        <div class="equipes">1º e 2º Anos</div>
+                    </div>
+                    <div class="atividade">
+                        <div class="horario">10:15 - 12:00</div>
+                        <div class="esporte"><i class="fas fa-volleyball-ball sport-icon"></i>Vôlei</div>
+                        <div class="local">Quadra Coberta</div>
+                        <div class="equipes">2º e 3º Anos</div>
+                    </div>
+                    <div class="atividade">
+                        <div class="horario">14:00 - 16:00</div>
+                        <div class="esporte"><i class="fas fa-futbol sport-icon"></i>Futsal</div>
+                        <div class="local">Quadra Externa</div>
+                        <div class="equipes">Todas as turmas</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dia">
+                <div class="dia-header">Dia 2 - Terça-feira (11/06/2025)</div>
+                <div class="atividades">
+                    <div class="atividade">
+                        <div class="horario">8:00 - 10:00</div>
+                        <div class="esporte"><i class="fas fa-running sport-icon"></i>Atletismo</div>
+                        <div class="local">Pista de Corrida</div>
+                        <div class="equipes">Todas as turmas</div>
+                    </div>
+                    <div class="atividade">
+                        <div class="horario">10:15 - 12:00</div>
+                        <div class="esporte"><i class="fas fa-table-tennis sport-icon"></i>Tênis de Mesa</div>
+                        <div class="local">Salão de Jogos</div>
+                        <div class="equipes">Individual</div>
+                    </div>
+                    <div class="atividade">
+                        <div class="horario">14:00 - 16:00</div>
+                        <div class="esporte"><i class="fas fa-volleyball-ball sport-icon"></i>Vôlei</div>
+                        <div class="local">Quadra Coberta</div>
+                        <div class="equipes">1º Ano</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dia">
+                <div class="dia-header">Dia 3 - Quarta-feira (12/06/2025)</div>
+                <div class="atividades">
+                    <div class="atividade">
+                        <div class="horario">8:00 - 10:00</div>
+                        <div class="esporte"><i class="fas fa-futbol sport-icon"></i>Futsal</div>
+                        <div class="local">Quadra Externa</div>
+                        <div class="equipes">3º Ano</div>
+                    </div>
+                    <div class="atividade">
+                        <div class="horario">10:15 - 12:00</div>
+                        <div class="esporte"><i class="fas fa-chess sport-icon"></i>Xadrez</div>
+                        <div class="local">Biblioteca</div>
+                        <div class="equipes">Individual</div>
+                    </div>
+                    <div class="atividade">
+                        <div class="horario">14:00 - 16:00</div>
+                        <div class="esporte"><i class="fas fa-basketball-ball sport-icon"></i>Basquete</div>
+                        <div class="local">Quadra Principal</div>
+                        <div class="equipes">Final</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dia">
+                <div class="dia-header">Dia 4 - Quinta-feira (13/06/2025)</div>
+                <div class="atividades">
+                    <div class="atividade">
+                        <div class="horario">8:00 - 10:00</div>
+                        <div class="esporte"><i class="fas fa-flag sport-icon"></i>Queimada</div>
+                        <div class="local">Quadra Poliesportiva</div>
+                        <div class="equipes">Todas as turmas</div>
+                    </div>
+                    <div class="atividade">
+                        <div class="horario">10:15 - 12:00</div>
+                        <div class="esporte"><i class="fas fa-running sport-icon"></i>Corrida de Revezamento</div>
+                        <div class="local">Pista de Corrida</div>
+                        <div class="equipes">Mista</div>
+                    </div>
+                    <div class="atividade">
+                        <div class="horario">14:00 - 17:00</div>
+                        <div class="esporte"><i class="fas fa-futbol sport-icon"></i>Futsal</div>
+                        <div class="local">Quadra Principal</div>
+                        <div class="equipes">Finais</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dia">
+                <div class="dia-header">Dia 5 - Sexta-feira (14/06/2025)</div>
+                <div class="atividades">
+                    <div class="atividade">
+                        <div class="horario">8:00 - 10:00</div>
+                        <div class="esporte"><i class="fas fa-trophy sport-icon"></i>Finais Diversas</div>
+                        <div class="local">Quadras</div>
+                        <div class="equipes">Finalistas</div>
+                    </div>
+                    <div class="atividade">
+                        <div class="horario">10:15 - 12:00</div>
+                        <div class="esporte"><i class="fas fa-users sport-icon"></i>Gincanas</div>
+                        <div class="local">Campo</div>
+                        <div class="equipes">Todas</div>
+                    </div>
+                    <div class="atividade">
+                        <div class="horario">14:00 - 16:00</div>
+                        <div class="esporte"><i class="fas fa-medal sport-icon"></i>Cerimônia de Encerramento</div>
+                        <div class="local">Auditório</div>
+                        <div class="equipes">Premiação</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="index.html" class="return-link">Voltar para página principal</a>
+    </div>
+
+    <footer>
+        <p>Jogos Internos 2025 - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
