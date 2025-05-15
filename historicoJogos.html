@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos Internos - Equipes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1a237e;
+            --secondary-color: #f9a826;
+            --text-color: #333;
+            --light-bg: #f5f5f5;
+            --card-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--secondary-color);
+            display: inline-block;
+        }
+
+        .title-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .equipes-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .equipe-card {
+            flex: 0 0 calc(33.33% - 2rem);
+            min-width: 280px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .equipe-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .equipe-header {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .equipe-simbolo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: var(--light-bg);
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+        }
+
+        .equipe-nome {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .equipe-turma {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .equipe-info {
+            padding: 1.5rem;
+            border-top: 1px solid #eee;
+        }
+
+        .cor-container {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .cor-label {
+            font-weight: bold;
+        }
+
+        .cor-amostra {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid #ddd;
+        }
+
+        .equipe-mascote {
+            font-weight: bold;
+            margin-bottom: 0.75rem;
+        }
+
+        .equipe-lema {
+            font-style: italic;
+            color: #666;
+        }
+
+        /* Cores específicas das equipes */
+        .equipe-1 .equipe-header {
+            background-color: #e53935;
+            color: white;
+        }
+        .equipe-1 .cor-amostra {
+            background-color: #e53935;
+        }
+
+        .equipe-2 .equipe-header {
+            background-color: #1e88e5;
+            color: white;
+        }
+        .equipe-2 .cor-amostra {
+            background-color: #1e88e5;
+        }
+
+        .equipe-3 .equipe-header {
+            background-color: #43a047;
+            color: white;
+        }
+        .equipe-3 .cor-amostra {
+            background-color: #43a047;
+        }
+
+        .equipe-4 .equipe-header {
+            background-color: #fb8c00;
+            color: white;
+        }
+        .equipe-4 .cor-amostra {
+            background-color: #fb8c00;
+        }
+
+        .equipe-5 .equipe-header {
+            background-color: #8e24aa;
+            color: white;
+        }
+        .equipe-5 .cor-amostra {
+            background-color: #8e24aa;
+        }
+
+        .equipe-6 .equipe-header {
+            background-color: #009688;
+            color: white;
+        }
+        .equipe-6 .cor-amostra {
+            background-color: #009688;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        .return-link {
+            display: block;
+            text-align: center;
+            margin-top: 2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .return-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .equipe-card {
+                flex: 0 0 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jogos Internos 2025</h1>
+        <p>Equipes Participantes</p>
+    </header>
+
+    <div class="container">
+        <div class="title-container">
+            <h2 class="section-title">Nossas Equipes</h2>
+        </div>
+
+        <div class="equipes-container">
+            <div class="equipe-card equipe-1">
+                <div class="equipe-header">
+                    <div class="equipe-simbolo">🔥</div>
+                    <div class="equipe-nome">Fênix</div>
+                    <div class="equipe-turma">1º Ano A</div>
+                </div>
+                <div class="equipe-info">
+                    <div class="cor-container">
+                        <span class="cor-label">Cor:</span>
+                        <div class="cor-amostra"></div>
+                        <span>Vermelho</span>
+                    </div>
+                    <div class="equipe-mascote">Mascote: Fênix</div>
+                    <div class="equipe-lema">"Das cinzas à vitória"</div>
+                </div>
+            </div>
+
+            <div class="equipe-card equipe-2">
+                <div class="equipe-header">
+                    <div class="equipe-simbolo">🦅</div>
+                    <div class="equipe-nome">Águias</div>
+                    <div class="equipe-turma">1º Ano B</div>
+                </div>
+                <div class="equipe-info">
+                    <div class="cor-container">
+                        <span class="cor-label">Cor:</span>
+                        <div class="cor-amostra"></div>
+                        <span>Azul</span>
+                    </div>
+                    <div class="equipe-mascote">Mascote: Águia</div>
+                    <div class="equipe-lema">"Voando alto rumo à vitória"</div>
+                </div>
+            </div>
+
+            <div class="equipe-card equipe-3">
+                <div class="equipe-header">
+                    <div class="equipe-simbolo">🐺</div>
+                    <div class="equipe-nome">Lobos</div>
+                    <div class="equipe-turma">2º Ano A</div>
+                </div>
+                <div class="equipe-info">
+                    <div class="cor-container">
+                        <span class="cor-label">Cor:</span>
+                        <div class="cor-amostra"></div>
+                        <span>Verde</span>
+                    </div>
+                    <div class="equipe-mascote">Mascote: Lobo</div>
+                    <div class="equipe-lema">"Unidos pela força da matilha"</div>
+                </div>
+            </div>
+
+            <div class="equipe-card equipe-4">
+                <div class="equipe-header">
+                    <div class="equipe-simbolo">🦁</div>
+                    <div class="equipe-nome">Leões</div>
+                    <div class="equipe-turma">2º Ano B</div>
+                </div>
+                <div class="equipe-info">
+                    <div class="cor-container">
+                        <span class="cor-label">Cor:</span>
+                        <div class="cor-amostra"></div>
+                        <span>Laranja</span>
+                    </div>
+                    <div class="equipe-mascote">Mascote: Leão</div>
+                    <div class="equipe-lema">"Rugindo pela vitória"</div>
+                </div>
+            </div>
+
+            <div class="equipe-card equipe-5">
+                <div class="equipe-header">
+                    <div class="equipe-simbolo">🐯</div>
+                    <div class="equipe-nome">Tigres</div>
+                    <div class="equipe-turma">3º Ano A</div>
+                </div>
+                <div class="equipe-info">
+                    <div class="cor-container">
+                        <span class="cor-label">Cor:</span>
+                        <div class="cor-amostra"></div>
+                        <span>Roxo</span>
+                    </div>
+                    <div class="equipe-mascote">Mascote: Tigre</div>
+                    <div class="equipe-lema">"Garras afiadas para o triunfo"</div>
+                </div>
+            </div>
+
+            <div class="equipe-card equipe-6">
+                <div class="equipe-header">
+                    <div class="equipe-simbolo">🐉</div>
+                    <div class="equipe-nome">Dragões</div>
+                    <div class="equipe-turma">3º Ano B</div>
+                </div>
+                <div class="equipe-info">
+                    <div class="cor-container">
+                        <span class="cor-label">Cor:</span>
+                        <div class="cor-amostra"></div>
+                        <span>Verde-água</span>
+                    </div>
+                    <div class="equipe-mascote">Mascote: Dragão</div>
+                    <div class="equipe-lema">"Fogo e determinação"</div>
+                </div>
+            </div>
+        </div>
+
+        <a href="index.html" class="return-link">Voltar para página principal</a>
+    </div>
+
+    <footer>
+        <p>Jogos Internos 2025 - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
