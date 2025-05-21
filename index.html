@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Jogos Internos - Modalidades Esportivas</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <style>
+       :root {
+           --primary-color: #9f1414;
+           --secondary-color: #f9a826;
+           --text-color: #333;
+           --light-bg: #f5f5f5;
+           --card-shadow: 0 4px 8px rgba(0,0,0,0.1);
+       }
+
+
+       * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+       }
+
+
+       body {
+           font-family: 'Roboto', sans-serif;
+           line-height: 1.6;
+           color: var(--text-color);
+           background-color: var(--light-bg);
+       }
+
+
+       header {
+           background-color: var(--primary-color);
+           color: white;
+           padding: 2rem 1rem;
+           text-align: center;
+       }
+
+
+       h1, h2, h3 {
+           font-family: 'Montserrat', sans-serif;
+           margin-bottom: 1rem;
+       }
+
+
+       h1 {
+           font-size: 2.5rem;
+       }
+
+
+       .container {
+           max-width: 1200px;
+           margin: 0 auto;
+           padding: 2rem 1rem;
+       }
+
+
+       .section-title {
+           text-align: center;
+           margin-bottom: 2rem;
+           color: var(--primary-color);
+           padding-bottom: 0.5rem;
+           border-bottom: 3px solid var(--secondary-color);
+           display: inline-block;
+       }
+
+
+       .title-container {
+           display: flex;
+           justify-content: center;
+           margin-bottom: 3rem;
+       }
+
+
+       .modalidades-container {
+           display: flex;
+           flex-wrap: wrap;
+           gap: 2rem;
+           justify-content: center;
+       }
+
+
+       .modalidade-card {
+           flex: 0 0 calc(33.33% - 2rem);
+           min-width: 280px;
+           background-color: white;
+           border-radius: 8px;
+           box-shadow: var(--card-shadow);
+           overflow: hidden;
+           transition: transform 0.3s ease;
+       }
+
+
+       .modalidade-card:hover {
+           transform: translateY(-5px);
+       }
+
+
+       .modalidade-header {
+           background-color: var(--primary-color);
+           color: white;
+           padding: 1.5rem;
+           text-align: center;
+           position: relative;
+       }
+
+
+       .modalidade-icon {
+           font-size: 2.5rem;
+           margin-bottom: 1rem;
+           display: block;
+       }
+
+
+       .modalidade-nome {
+           font-size: 1.5rem;
+           font-weight: bold;
+       }
+
+
+       .modalidade-info {
+           padding: 1.5rem;
+       }
+
+
+       .modalidade-desc {
+           margin-bottom: 1rem;
+       }
+
+
+       .modalidade-detalhes {
+           list-style: none;
+       }
+
+
+       .modalidade-detalhes li {
+           margin-bottom: 0.5rem;
+           padding-left: 1.5rem;
+           position: relative;
+       }
+
+
+       .modalidade-detalhes li:before {
+           content: "";
+           position: absolute;
+           left: 0;
+           top: 8px;
+           width: 6px;
+           height: 6px;
+           border-radius: 50%;
+           background-color: var(--secondary-color);
+       }
+
+
+       .modalidade-categoria {
+           position: absolute;
+           top: 10px;
+           right: 10px;
+           background-color: var(--secondary-color);
+           color: white;
+           padding: 0.25rem 0.75rem;
+           border-radius: 20px;
+           font-size: 0.8rem;
+           font-weight: bold;
+       }
+
+
+       footer {
+           background-color: var(--primary-color);
+           color: white;
+           text-align: center;
+           padding: 1rem;
+           margin-top: 2rem;
+       }
+
+
+       .return-link {
+           display: block;
+           text-align: center;
+           margin-top: 2rem;
+           color: var(--primary-color);
+           text-decoration: none;
+           font-weight: bold;
+       }
+
+
+       .return-link:hover {
+           text-decoration: underline;
+       }
+
+
+       @media (max-width: 768px) {
+           .modalidade-card {
+               flex: 0 0 100%;
+           }
+       }
+   </style>
+</head>
+<body>
+   <header>
+       <h1>Jogos Internos 2025</h1>
+       <p>Modalidades Esportivas</p>
+   </header>
+
+
+   <div class="container">
+       <div class="title-container">
+           <h2 class="section-title">Esportes e Competições</h2>
+       </div>
+
+       <div class="modalidades-container">
+           <div class="modalidade-card">
+               <div class="modalidade-header">
+                   <span class="modalidade-categoria">Coletivo</span>
+                   <i class="fas fa-futbol modalidade-icon"></i>
+                   <h3 class="modalidade-nome">Futsal</h3>
+               </div>
+               <div class="modalidade-info">
+                   <p class="modalidade-desc">Uma das modalidades mais populares dos jogos internos, o futsal é disputado em formato de campeonato com fase de equipes e eliminatórias.</p>
+                   <ul class="modalidade-detalhes">
+                       <li>Equipes de 5 jogadores contra 5 jogadores(4 na linha + goleiro)</li>
+                       <li>Partidas de 10 minutos por tempo</li>
+                       <li>Categorias: Masculino e Feminino</li>
+                       <li>Local: Quadra</li>
+                   </ul>
+               </div>
+           </div>
+           <div class="modalidade-card">
+               <div class="modalidade-header">
+                   <span class="modalidade-categoria">Coletivo</span>
+                   <i class="fas fa-volleyball-ball modalidade-icon"></i>
+                   <h3 class="modalidade-nome">Vôlei</h3>
+               </div>
+               <div class="modalidade-info">
+                   <p class="modalidade-desc">O voleibol é disputado em equipes, que trocam a bola por cima de uma rede com o objetivo de fazê-la tocar o chão da quadra adversária. É uma das modalidades que mais movimenta a torcida.</p>
+                   <ul class="modalidade-detalhes">
+                       <li>Equipe de 6 jogadores contra 6 jogadores</li>
+                       <li>Sets de 15 pontos (1 set nas eliminatórias, 3 sets nas finais)</li>
+                       <li>Categorias: Feminino, Masculino e Misto</li>
+                       <li>Local: Quadra</li>
+                   </ul>
+               </div>
+           </div>
+           <div class="modalidade-card">
+               <div class="modalidade-header">
+                   <span class="modalidade-categoria">Coletivo</span>
+                   <i class="fas fa-basketball-ball modalidade-icon"></i>
+                   <h3 class="modalidade-nome">Basquete</h3>
+               </div>
+               <div class="modalidade-info">
+                   <p class="modalidade-desc">O basquete nos jogos internos é conhecido pelos lances de tirar o fôlego e pela disputa acirrada. Os jogos acontecem em sistema de eliminatórias.</p>
+                   <ul class="modalidade-detalhes">
+                       <li>Time de 5 jogadores</li>
+                       <li>Partidas de 10 minutos(1 tempo)</li>
+                       <li>Categorias: Masculino e Feminino</li>
+                       <li>Local: Quadra</li>
+                   </ul>
+               </div>
+           </div>
+           <div class="modalidade-card">
+               <div class="modalidade-header">
+                   <span class="modalidade-categoria">Individual</span>
+                   <i class="fas fa-running modalidade-icon"></i>
+                   <h3 class="modalidade-nome">Atletismo</h3>
+               </div>
+               <div class="modalidade-info">
+                   <p class="modalidade-desc">Atletismo é um esporte que reúne várias modalidades como corridas, saltos e arremessos. É praticado individualmente e mede força, velocidade e resistência.</p>
+                   <ul class="modalidade-detalhes">
+                       <li>Provas: 100m e 400m rasos</li>
+                       <li>Corridas</li>
+                       <li>Categorias: Masculino e Feminino</li>
+                       <li>Local: Pista de Atletismo do Quintela</li>
+                   </ul>
+               </div>
+           </div>
+           <div class="modalidade-card">
+               <div class="modalidade-header">
+                   <span class="modalidade-categoria">Dois jogadores</span>
+                   <i class="fas fa-table-tennis modalidade-icon"></i>
+                   <h3 class="modalidade-nome">Xadrez</h3>
+               </div>
+               <div class="modalidade-info">
+                   <p class="modalidade-desc">Xadrez é um jogo de estratégia para dois jogadores, disputado em um tabuleiro de 64 casas, onde o objetivo é dar xeque-mate no rei adversário.</p>
+                   <ul class="modalidade-detalhes">
+                       <li>Quem ganha a partida, joga com o próximo</li>
+                       <li>Categorias: Duplas</li>
+                       <li>Torneio fechado para os jogadores</li>
+                       <li>Local: Sala Modular</li>
+                   </ul>
+               </div>
+           </div>
+           <div class="modalidade-card">
+               <div class="modalidade-header">
+                   <span class="modalidade-categoria">Individual</span>
+                   <i class="fas fa-swimming-pool modalidade-icon"></i>
+                   <h3 class="modalidade-nome">Natação</h3>
+               </div>
+               <div class="modalidade-info">
+                   <p class="modalidade-desc">A natação é um esporte individual praticado em piscinas, onde os atletas competem para nadar determinada distância no menor tempo possível.</p>
+                   <ul class="modalidade-detalhes">
+                       <li>Provas: 50m livre, 50m costas, 50m peito</li>
+                       <li>Revezamento 4x50m livre</li>
+                       <li>Categorias: Masculino e Feminino</li>
+                       <li>Local: Piscina do Quintela</li>
+                   </ul>
+               </div>
+           </div>
+
+
+           <div class="modalidade-card">
+               <div class="modalidade-header">
+                   <span class="modalidade-categoria">Coletivo</span>
+                   <i class="fas fa-users modalidade-icon"></i>
+                   <h3 class="modalidade-nome">Handebol</h3>
+               </div>
+               <div class="modalidade-info">
+                   <p class="modalidade-desc">Handebol é um esporte, rápido e de muito contato, jogado com as mãos entre dois times de 7 jogadores. O objetivo é fazer mais gols que o adversário em um tempo determinado.</p>
+                   <ul class="modalidade-detalhes">
+                       <li>Equipe de 7 jogadores contra 7 jogadores</li>
+                       <li>Partida de 10 minutos (1 tempo)</li>
+                       <li>Categorias: Masculino e Feminino</li>
+                       <li>Local: Quadra</li>
+                   </ul>
+               </div>
+           </div>
+       </div>
+
+
+       <a href="index.html" class="return-link">Voltar para página principal</a>
+   </div>
+
+
+   <footer>
+       <p>JIFAL 2025 - Todos os direitos reservados</p>
+   </footer>
+</body>
+</html>
+
