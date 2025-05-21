@@ -1,637 +1,360 @@
-
-Vou criar as páginas de programação, atletas, separadamente seguindo os requisitos :  Programação
-* Tabela ou lista com dias, horários, esportes e locais.
-* Layout organizado com Flexbox.
-
-4. Equipes Participantes
-* Nomes das turmas/equipes, símbolos e cores.
-* Alinhamento com Flexbox.7. Histórico dos Jogos Internos
-   * Lista dos campeões e destaques dos anos anteriores.
-   * Apresentação com cards ou blocos usando Flexbox.
-🛠️ Tecnologias Obrigatórias
-   * HTML5
-   * CSS3
-   * Flexbox para o layout de todas as seções
-   * Importação de pelo menos uma fonte externa
-💡 Sugestões de Estilo
-   * Cores da escola ou das equipes.
-   * Layout limpo, moderno e visualmente agradável.
-   * Uso de ícones e imagens melhora a apresentação.
-   * Responsividade será valorizada.
-
-Vou te ajudar a criar essas páginas separadamente, seguindo os requisitos especificados. Vamos começar com a criação dos arquivos HTML e CSS para cada uma delas, seguindo as tecnologias obrigatórias.
-
-Primeiro, vamos criar a página de Programação dos Jogos:
-
-
-Programação dos Jogos
-Artefato interativo 
-Agora, vamos criar a página de Equipes Participantes:
-
-
-Equipes Participantes
-Artefato interativo 
-Por fim, vamos criar a página de Histórico dos Jogos Internos:
-
-
-Criando artefato...
- 
-
-
-
-
-Continuar
-
-Vou completar a página de Histórico dos Jogos Internos.
-
-
-Equipes Participantes
-Artefato interativo ∙ Versão 2 
-
-Histórico dos Jogos Internos
-Artefato interativo 
-Agora, vamos criar uma página principal que vai integrar e conectar todas as páginas que criamos:
-
-
-Criando artefato...
- 
-
-
-
-agora faça a 3. Modalidades Esportivas
-* Lista com os esportes e uma breve descrição.
-* Cards organizados com Flexbox.
-
-Vou criar a página de Modalidades Esportivas com cards organizados usando Flexbox:
-
-
-Criando artefato...
- 
-
-
-
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogos Internos - Histórico</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #1a237e;
-            --secondary-color: #f9a826;
-            --text-color: #333;
-            --light-bg: #f5f5f5;
-            --card-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Histórico dos Jogos Internos</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background-color: #ffedda;
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    header {
+      background-color: #541518;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--light-bg);
-        }
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
 
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 2rem 1rem;
-            text-align: center;
-        }
+    .logo {
+      height: 60px;
+      width: auto;
+    }
 
-        h1, h2, h3 {
-            font-family: 'Montserrat', sans-serif;
-            margin-bottom: 1rem;
-        }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #902c2e;
+      padding: 0.5rem;
+    }
 
-        h1 {
-            font-size: 2.5rem;
-        }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-        }
+    .container {
+      padding: 2rem;
+    }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 2rem;
-            color: var(--primary-color);
-            padding-bottom: 0.5rem;
-            border-bottom: 3px solid var(--secondary-color);
-            display: inline-block;
-        }
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
 
-        .title-container {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 3rem;
-        }
+    #titulo-historico {
+      color: #541518;
+      font-size: 2rem;
+      text-shadow: 1px 1px 2px #00000050;
+    }
 
-        .historico-container {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
+    .cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
 
-        .ano-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
+    .card {
+      background-color: white;
+      border: 2px solid #7a0909;
+      border-radius: 8px;
+      box-shadow: 0 6px 10px rgba(136, 29, 29, 0.1);
+      padding: 2rem;
+      width: 90%;
+      max-width: 600px;
+      transition: transform 0.3s;
+    }
 
-        .ano-header {
-            flex: 0 0 100%;
-            background-color: var(--primary-color);
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 6px;
-            font-size: 1.5rem;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-        }
+    .card:hover {
+      transform: scale(1.02);
+    }
 
-        .ano-icon {
-            margin-right: 10px;
-            color: var(--secondary-color);
-        }
+    .card h2 {
+      color: #541518;
+      margin-bottom: 0.5rem;
+      justify-content: space-between;
+    }
 
-        .campeao-card {
-            flex: 1 0 300px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: var(--card-shadow);
-            overflow: hidden;
-            position: relative;
-        }
+    .card p {
+      margin: 0.3rem 0;
+    }
 
-        .card-header {
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 1rem;
-            text-align: center;
-            font-weight: bold;
-        }
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #541518;
+      color: white;
+      padding: 1rem;
+      flex-wrap: wrap;
+    }
 
-        .campeao-info {
-            padding: 1.5rem;
-        }
+    footer div {
+      margin: 0.5rem;
+    }
 
-        .medalha {
-            position: absolute;
-            top: -10px;
-            right: -10px;
-            width: 50px;
-            height: 50px;
-            background-color: var(--secondary-color);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            box-shadow: var(--card-shadow);
-        }
+    @media (max-width: 600px) {
+      .header-content {
+        flex-direction: column;
+      }
 
-        .destaque-container {
-            flex: 1 0 100%;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            margin-top: 1rem;
-        }
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
 
-        .destaque-card {
-            flex: 1 0 200px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: var(--card-shadow);
-            overflow: hidden;
-        }
-
-        .destaque-header {
-            background-color: #9e9e9e;
-            color: white;
-            padding: 0.75rem;
-            text-align: center;
-            font-weight: bold;
-        }
-
-        .destaque-info {
-            padding: 1rem;
-        }
-
-        .destaque-nome {
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-
-        .destaque-turma {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 0.5rem;
-        }
-
-        .destaque-desc {
-            font-size: 0.9rem;
-        }
-
-        .campeao-esporte {
-            display: flex;
-            align-items: center;
-            margin-bottom: 0.5rem;
-        }
-
-        .esporte-icon {
-            margin-right: 0.5rem;
-            color: var(--primary-color);
-        }
-
-        .esporte-pontos {
-            font-weight: bold;
-            color: var(--secondary-color);
-        }
-
-        .campeao-nome {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        .equipe-img {
-            text-align: center;
-            margin-bottom: 1rem;
-            font-size: 3rem;
-        }
-
-        footer {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
-
-        .return-link {
-            display: block;
-            text-align: center;
-            margin-top: 2rem;
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .return-link:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            .campeao-card {
-                flex: 0 0 100%;
-            }
-            
-            .destaque-card {
-                flex: 0 0 100%;
-            }
-        }
-    </style>
+      footer {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Jogos Internos 2025</h1>
-        <p>Histórico dos Jogos</p>
-    </header>
-
-    <div class="container">
-        <div class="title-container">
-            <h2 class="section-title">Campeões e Destaques</h2>
-        </div>
-
-        <div class="historico-container">
-            <!-- 2024 -->
-            <div class="ano-container">
-                <div class="ano-header">
-                    <i class="fas fa-trophy ano-icon"></i> Jogos Internos 2024
-                </div>
-                
-                <div class="campeao-card">
-                    <div class="medalha">🥇</div>
-                    <div class="card-header">Campeão Geral</div>
-                    <div class="campeao-info">
-                        <div class="equipe-img">🐯</div>
-                        <div class="campeao-nome">Tigres - 3º Ano A</div>
-                        
-                        <div class="campeao-esporte">
-                            <i class="fas fa-futbol esporte-icon"></i>
-                            <span>Futsal:</span>
-                            <span class="esporte-pontos"> 1º lugar</span>
-                        </div>
-                        
-                        <div class="campeao-esporte">
-                            <i class="fas fa-running esporte-icon"></i>
-                            <span>Atletismo:</span>
-                            <span class="esporte-pontos"> 1º lugar</span>
-                        </div>
-                        
-                        <div class="campeao-esporte">
-                            <i class="fas fa-volleyball-ball esporte-icon"></i>
-                            <span>Vôlei:</span>
-                            <span class="esporte-pontos"> 2º lugar</span>
-                        </div>
-                        
-                        <div class="campeao-esporte">
-                            <i class="fas fa-chart-bar esporte-icon"></i>
-                            <span>Pontuação total:</span>
-                            <span class="esporte-pontos"> 287 pontos</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="campeao-card">
-                    <div class="medalha">🥈</div>
-                    <div class="card-header">Vice-Campeão</div>
-                    <div class="campeao-info">
-                        <div class="equipe-img">🐉</div>
-                        <div class="campeao-nome">Dragões - 3º Ano B</div>
-                        
-                        <div class="campeao-esporte">
-                            <i class="fas fa-volleyball-ball esporte-icon"></i>
-                            <span>Vôlei:</span>
-                            <span class="esporte-pontos"> 1º lugar</span>
-                        </div>
-                        
-                        <div class="campeao-esporte">
-                            <i class="fas fa-basketball-ball esporte-icon"></i>
-                            <span>Basquete:</span>
-                            <span class="esporte-pontos"> 1º lugar</span>
-                        </div>
-                        
-                        <div class="campeao-esporte">
-                            <i class="fas fa-running esporte-icon"></i>
-                            <span>Atletismo:</span>
-                            <span class="esporte-pontos"> 3º lugar</span>
-                        </div>
-                        
-                        <div class="campeao-esporte">
-                            <i class="fas fa-chart-bar esporte-icon"></i>
-                            <span>Pontuação total:</span>
-                            <span class="esporte-pontos"> 265 pontos</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="destaque-container">
-                    <div class="destaque-card">
-                        <div class="destaque-header">Jogador Destaque - Futsal</div>
-                        <div class="destaque-info">
-                            <div class="destaque-nome">Pedro Oliveira</div>
-                            <div class="destaque-turma">Tigres - 3º Ano A</div>
-                            <div class="destaque-desc">Marcou 12 gols durante a competição e foi decisivo na final.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="destaque-card">
-                        <div class="destaque-header">Jogadora Destaque - Vôlei</div>
-                        <div class="destaque-info">
-                            <div class="destaque-nome">Mariana Santos</div>
-                            <div class="destaque-turma">Dragões - 3º Ano B</div>
-                            <div class="destaque-desc">Líder em pontos, com grande atuação nos momentos decisivos.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="destaque-card">
-                        <div class="destaque-header">Destaque Atletismo</div>
-                        <div class="destaque-info">
-                            <div class="destaque-nome">Lucas Mendes</div>
-                            <div class="destaque-turma">Tigres - 3º Ano A</div>
-                            <div class="destaque-desc">Venceu as provas de 100m e 200m rasos com recordes internos.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 2023 -->
-            <div class="ano-container">
-                <div class="ano-header">
-                    <i class="fas fa-trophy ano-icon"></i> Jogos Internos 2023
-                </div>
-                
-                <div class="campeao-card">
-                    <div class="medalha">🥇</div>
-                    <div class="card-header">Campeão Geral</div>
-                    <div class="campeao-info">
-                        <div class="equipe-img">🦁</div>
-                        <div class="campeao-nome">Leões - 3º Ano B</div>
-                        
-                        <div class="campeao-esporte">
-                            <i class="fas fa-basketball-ball esporte-icon"></i>
-                            <span>Basquete:</span>
-                            <span class="esporte-pontos"> 1º lugar</span>
-                        </div>
-                        
-                        <div class="campeao-esporte">
-                            <i class="fas fa-futbol esporte-icon"></i>
-                            <span>Futsal:</span>
-                            <span class="esporte-pontos"> 1º lugar</span>
-                        </div>
-                        
-                        <div class="campeao-esporte">
-                            <i class="fas fa-flag esporte-icon"></i>
-                            <span>Queimada:</span>
-                            <span class="esporte-pontos"> 2º lugar</span>
-                        </div>
-                        
-                        <div class="campeao-esporte">
-                            <i class="fas fa-chart-bar esporte-icon"></i>
-                            <span>Pontuação total:</span>
-                            <span class="esporte-pontos"> 302 pontos</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="campeao-card">
-                    <div class="medalha">🥈</div>
-                    <div class="card-header">Vice-Campeão</div>
-                    <div class="campeao-info">
-                        <div class="equipe-img">🐺</div>
-                        <div class="campeao-nome">Lobos - 3º Ano A</div>
-                        
-                        <div class="campeao-esporte">
-                            <i class="fas fa-volleyball-ball esporte-icon"></i>
-                            <span>Vôlei:</span>
-                            <span class="esporte-pontos"> 1º lugar</span>
-                        </div>
-                        
-                        <div class="campeao-esporte">
-                            <i class="fas fa-running esporte-icon"></i>
-                            <span>Atletismo:</span>
-                            <span class="esporte-pontos"> 1º lugar</span>
-                        </div>
-                        
-                        <div class="campeao-esporte">
-                            <i class="fas fa-futbol esporte-icon"></i>
-                            <span>Futsal:</span>
-                            <span class="esporte-pontos"> 3º lugar</span>
-                        </div>
-                        
-                        <div class="campeao-esporte">
-                            <i class="fas fa-chart-bar esporte-icon"></i>
-                            <span>Pontuação total:</span>
-                            <span class="esporte-pontos"> 278 pontos</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="destaque-container">
-                    <div class="destaque-card">
-                        <div class="destaque-header">Jogador Destaque - Basquete</div>
-                        <div class="destaque-info">
-                            <div class="destaque-nome">Carlos Ferreira</div>
-                            <div class="destaque-turma">Leões - 3º Ano B</div>
-                            <div class="destaque-desc">Média de 18 pontos por jogo, mostrou grande técnica e liderança.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="destaque-card">
-                        <div class="destaque-header">Jogadora Destaque - Vôlei</div>
-                        <div class="destaque-info">
-                            <div class="destaque-nome">Júlia Costa</div>
-                            <div class="destaque-turma">Lobos - 3º Ano A</div>
-                            <div class="destaque-desc">Excelente na recepção e no saque, foi fundamental para o título.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="destaque-card">
-                        <div class="destaque-header">Destaque Atletismo</div>
-                        <div class="destaque-info">
-                            <div class="destaque-nome">Bruno Lima</div>
-                            <div class="destaque-turma">Lobos - 3º Ano A</div>
-                            <div class="destaque-desc">Vencedor das provas de salto em distância e revezamento 4x100m.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 2022 -->
-            <div class="ano-container">
-                <div class="ano-header">
-                    <i class="fas fa-trophy ano-icon"></i> Jogos Internos 2022
-                </div>
-                
-                <div class="campeao-card">
-                    <div class="medalha">🥇</div>
-                    <div class="card-header">Campeão Geral</div>
-                    <div class="campeao-info">
-                        <div class="equipe-img">🦅</div>
-                        <div class="campeao-nome">Águias - 3º Ano A</div>
-                        
-                        <div class="campeao-esporte">
-                            <i class="fas fa-volleyball-ball esporte-icon"></i>
-                            <span>Vôlei:</span>
-                            <span class="esporte-pontos"> 1º lugar</span>
-                        </div>
-                        
-                        <div class="campeao-esporte">
-                            <i class="fas fa-table-tennis esporte-icon"></i>
-                            <span>Tênis de Mesa:</span>
-                            <span class="esporte-pontos"> 1º lugar</span>
-                        </div>
-                        
-                        <div class="campeao-esporte">
-                            <i class="fas fa-running esporte-icon"></i>
-                            <span>Atletismo:</span>
-                            <span class="esporte-pontos"> 2º lugar</span>
-                        </div>
-                        
-                        <div class="campeao-esporte">
-                            <i class="fas fa-chart-bar esporte-icon"></i>
-                            <span>Pontuação total:</span>
-                            <span class="esporte-pontos"> 293 pontos</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="campeao-card">
-                    <div class="medalha">🥈</div>
-                    <div class="card-header">Vice-Campeão</div>
-                    <div class="campeao-info">
-                        <div class="equipe-img">🔥</div>
-                        <div class="campeao-nome">Fênix - 3º Ano B</div>
-                        
-                        <div class="campeao-esporte">
-                            <i class="fas fa-futbol esporte-icon"></i>
-                            <span>Futsal:</span>
-                            <span class="esporte-pontos"> 1º lugar</span>
-                        </div>
-                        
-                        <div class="campeao-esporte">
-                            <i class="fas fa-basketball-ball esporte-icon"></i>
-                            <span>Basquete:</span>
-                            <span class="esporte-pontos"> 2º lugar</span>
-                        </div>
-                        
-                        <div class="campeao-esporte">
-                            <i class="fas fa-flag esporte-icon"></i>
-                            <span>Queimada:</span>
-                            <span class="esporte-pontos"> 1º lugar</span>
-                        </div>
-                        
-                        <div class="campeao-esporte">
-                            <i class="fas fa-chart-bar esporte-icon"></i>
-                            <span>Pontuação total:</span>
-                            <span class="esporte-pontos"> 285 pontos</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="destaque-container">
-                    <div class="destaque-card">
-                        <div class="destaque-header">Jogador Destaque - Futsal</div>
-                        <div class="destaque-info">
-                            <div class="destaque-nome">André Silva</div>
-                            <div class="destaque-turma">Fênix - 3º Ano B</div>
-                            <div class="destaque-desc">Artilheiro com 10 gols e melhor goleiro da competição.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="destaque-card">
-                        <div class="destaque-header">Jogadora Destaque - Vôlei</div>
-                        <div class="destaque-info">
-                            <div class="destaque-nome">Carolina Martins</div>
-                            <div class="destaque-turma">Águias - 3º Ano A</div>
-                            <div class="destaque-desc">Eleita melhor levantadora, com grande precisão nos passes.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="destaque-card">
-                        <div class="destaque-header">Destaque Espírito Esportivo</div>
-                        <div class="destaque-info">
-                            <div class="destaque-nome">Gabriel Almeida</div>
-                            <div class="destaque-turma">Fênix - 3º Ano B</div>
-                            <div class="destaque-desc">Premiado pelo fair play e espírito esportivo exemplar.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <a href="index.html" class="return-link">Voltar para página principal</a>
+  <header>
+    <div class="header-content">
+      <img src="logoIF.png" alt="Logo IFAL" class="logo">
+      <h1>Histórico dos Jogos Internos</h1>
     </div>
+  </header>
 
-    <footer>
-        <p>Jogos Internos 2025 - Todos os direitos reservados</p>
-    </footer>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="programacao.html">Programação</a>
+    <a href="modalidades.html">Modalidades</a>
+    <a href="equipes.html">Equipes</a>
+    <a href="historico.html">Histórico</a>
+  </nav>
+
+  <main class="container">
+    <h1 id="titulo-historico">Campeões e Destaques Anteriores</h1>
+    <div class="cards">
+      <div class="card">
+        <h2>2024</h2>
+        <p><strong>Campeã Geral:</strong> 913</p>
+        <p><strong>Destaque:</strong> Maria Souza (Atletismo)</p>
+        <p><strong>Novidade:</strong> Inclusão do Beach Tennis</p>
+      </div>
+
+      <div class="card">
+        <h2>2023</h2>
+        <p><strong>Campeã Geral:</strong>412</p>
+        <p><strong>Destaque:</strong> João Lima (Futsal)</p>
+        <p><strong>Novidade:</strong> Torneio de E-Sports</p>
+      </div>
+
+      <div class="card">
+        <h2>2022</h2>
+        <p><strong>Campeã Geral:</strong>923</p>
+        <p><strong>Destaque:</strong> Equipe Feminina de Handebol</p>
+        <p><strong>Novidade:</strong> Gincana cultural integrada</p>
+      </div>
+
+      <div class="card">
+        <h2>2021</h2>
+        <p><strong>Campeã Geral:</strong> 921</p>
+        <p><strong>Destaque:</strong> Lucas Mendes (Xadrez)</p>
+        <p><strong>Novidade:</strong> Retorno pós-pandemia</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div>IFAL - Instituto Federal de Alagoas</div>
+    <div>Desenvolvido por: Letícia Vital, Maria Arielly, Maria Klara, Nicolly Correia e Rúbia Barbosa</div>
+    <div>&copy; 2025</div>
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Histórico dos Jogos Internos</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background-color: #ffedda;
+    }
+
+    header {
+      background-color: #541518;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .logo {
+      height: 60px;
+      width: auto;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #902c2e;
+      padding: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    #titulo-historico {
+      color: #541518;
+      font-size: 2rem;
+      text-shadow: 1px 1px 2px #00000050;
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .card {
+      background-color: white;
+      border: 2px solid #7a0909;
+      border-radius: 8px;
+      box-shadow: 0 6px 10px rgba(136, 29, 29, 0.1);
+      padding: 2rem;
+      width: 90%;
+      max-width: 600px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card h2 {
+      color: #541518;
+      margin-bottom: 0.5rem;
+      justify-content: space-between;
+    }
+
+    .card p {
+      margin: 0.3rem 0;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #541518;
+      color: white;
+      padding: 1rem;
+      flex-wrap: wrap;
+    }
+
+    footer div {
+      margin: 0.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .header-content {
+        flex-direction: column;
+      }
+
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      footer {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <img src="logoIF.png" alt="Logo IFAL" class="logo">
+      <h1>Histórico dos Jogos Internos</h1>
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="programacao.html">Programação</a>
+    <a href="modalidades.html">Modalidades</a>
+    <a href="equipes.html">Equipes</a>
+    <a href="historico.html">Histórico</a>
+  </nav>
+
+  <main class="container">
+    <h1 id="titulo-historico">Campeões e Destaques Anteriores</h1>
+    <div class="cards">
+      <div class="card">
+        <h2>2024</h2>
+        <p><strong>Campeã Geral:</strong> 913</p>
+        <p><strong>Destaque:</strong> Maria Souza (Atletismo)</p>
+        <p><strong>Novidade:</strong> Inclusão do Beach Tennis</p>
+      </div>
+
+      <div class="card">
+        <h2>2023</h2>
+        <p><strong>Campeã Geral:</strong>412</p>
+        <p><strong>Destaque:</strong> João Lima (Futsal)</p>
+        <p><strong>Novidade:</strong> Torneio de E-Sports</p>
+      </div>
+
+      <div class="card">
+        <h2>2022</h2>
+        <p><strong>Campeã Geral:</strong>923</p>
+        <p><strong>Destaque:</strong> Equipe Feminina de Handebol</p>
+        <p><strong>Novidade:</strong> Gincana cultural integrada</p>
+      </div>
+
+      <div class="card">
+        <h2>2021</h2>
+        <p><strong>Campeã Geral:</strong> 921</p>
+        <p><strong>Destaque:</strong> Lucas Mendes (Xadrez)</p>
+        <p><strong>Novidade:</strong> Retorno pós-pandemia</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div>IFAL - Instituto Federal de Alagoas</div>
+    <div>Desenvolvido por: Letícia Vital, Maria Arielly, Maria Klara, Nicolly Correia e Rúbia Barbosa</div>
+    <div>&copy; 2025</div>
+  </footer>
 </body>
 </html>
