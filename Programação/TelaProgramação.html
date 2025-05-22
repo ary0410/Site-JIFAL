@@ -1,151 +1,206 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html> 
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogos Internos - Programação</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="flexbox_prog.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Histórico dos Jogos</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #541518;
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1{
+      color: #f9f9f9;
+      justify-content: center;
+      align-self: center;
+    }
+
+    header img{
+      height: 80px;
+      width: 80px;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .logo {
+      height: 130px;
+      width: auto;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      background: #902c2e;
+      padding: 0.75rem 1rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd9b3;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #541518;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .card h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #902c2e;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .card h2 .fa-calendar-alt {
+      color: #902c2e;
+    }
+
+    .card p {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .card p strong {
+      min-width: 110px;
+      color: #541518;
+    }
+
+    .card p .fa-trophy {
+      color: #d4af37;
+    }
+
+    .card p .fa-star {
+      color: #f39c12;
+    }
+
+    footer {
+      background: #541518;
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+      margin-top: 4rem;
+    }
+
+  </style>
 </head>
 <body>
-    <header>
-        <h1>JOGOS INTERNOS IFAL 2025</h1>
-    </header>
 
-    <div class="container">
-        <div class="title-container">
-            <h3 class="section-title">Programação Detalhada</h3>
-        </div>
-
-        <div class="programacao-container">
-            <div class="dia">
-                <div class="dia-header">Dia 1 - Segunda-feira (10/06/2025)</div>
-                <div class="atividades">
-                    <div class="atividade">
-                        <div class="horario">8:00 - 10:00</div>
-                        <div class="esporte"><i class="fas fa-basketball-ball sport-icon"></i>Basquete</div>
-                        <div class="local">Quadra Principal</div>
-                        <div class="equipes">1º e 2º Anos</div>
-                    </div>
-                    <div class="atividade">
-                        <div class="horario">10:15 - 12:00</div>
-                        <div class="esporte"><i class="fas fa-volleyball-ball sport-icon"></i>Vôlei</div>
-                        <div class="local">Quadra Coberta</div>
-                        <div class="equipes">2º e 3º Anos</div>
-                    </div>
-                    <div class="atividade">
-                        <div class="horario">14:00 - 16:00</div>
-                        <div class="esporte"><i class="fas fa-futbol sport-icon"></i>Futsal</div>
-                        <div class="local">Quadra Externa</div>
-                        <div class="equipes">Todas as turmas</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="dia">
-                <div class="dia-header">Dia 2 - Terça-feira (11/06/2025)</div>
-                <div class="atividades">
-                    <div class="atividade">
-                        <div class="horario">8:00 - 10:00</div>
-                        <div class="esporte"><i class="fas fa-running sport-icon"></i>Atletismo</div>
-                        <div class="local">Pista de Corrida</div>
-                        <div class="equipes">Todas as turmas</div>
-                    </div>
-                    <div class="atividade">
-                        <div class="horario">10:15 - 12:00</div>
-                        <div class="esporte"><i class="fas fa-table-tennis sport-icon"></i>Tênis de Mesa</div>
-                        <div class="local">Salão de Jogos</div>
-                        <div class="equipes">Individual</div>
-                    </div>
-                    <div class="atividade">
-                        <div class="horario">14:00 - 16:00</div>
-                        <div class="esporte"><i class="fas fa-volleyball-ball sport-icon"></i>Vôlei</div>
-                        <div class="local">Quadra Coberta</div>
-                        <div class="equipes">1º Ano</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="dia">
-                <div class="dia-header">Dia 3 - Quarta-feira (12/06/2025)</div>
-                <div class="atividades">
-                    <div class="atividade">
-                        <div class="horario">8:00 - 10:00</div>
-                        <div class="esporte"><i class="fas fa-futbol sport-icon"></i>Futsal</div>
-                        <div class="local">Quadra Externa</div>
-                        <div class="equipes">3º Ano</div>
-                    </div>
-                    <div class="atividade">
-                        <div class="horario">10:15 - 12:00</div>
-                        <div class="esporte"><i class="fas fa-chess sport-icon"></i>Xadrez</div>
-                        <div class="local">Biblioteca</div>
-                        <div class="equipes">Individual</div>
-                    </div>
-                    <div class="atividade">
-                        <div class="horario">14:00 - 16:00</div>
-                        <div class="esporte"><i class="fas fa-basketball-ball sport-icon"></i>Basquete</div>
-                        <div class="local">Quadra Principal</div>
-                        <div class="equipes">Final</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="dia">
-                <div class="dia-header">Dia 4 - Quinta-feira (13/06/2025)</div>
-                <div class="atividades">
-                    <div class="atividade">
-                        <div class="horario">8:00 - 10:00</div>
-                        <div class="esporte"><i class="fas fa-flag sport-icon"></i>Queimada</div>
-                        <div class="local">Quadra Poliesportiva</div>
-                        <div class="equipes">Todas as turmas</div>
-                    </div>
-                    <div class="atividade">
-                        <div class="horario">10:15 - 12:00</div>
-                        <div class="esporte"><i class="fas fa-running sport-icon"></i>Corrida de Revezamento</div>
-                        <div class="local">Pista de Corrida</div>
-                        <div class="equipes">Mista</div>
-                    </div>
-                    <div class="atividade">
-                        <div class="horario">14:00 - 17:00</div>
-                        <div class="esporte"><i class="fas fa-futbol sport-icon"></i>Futsal</div>
-                        <div class="local">Quadra Principal</div>
-                        <div class="equipes">Finais</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="dia">
-                <div class="dia-header">Dia 5 - Sexta-feira (14/06/2025)</div>
-                <div class="atividades">
-                    <div class="atividade">
-                        <div class="horario">8:00 - 10:00</div>
-                        <div class="esporte"><i class="fas fa-trophy sport-icon"></i>Finais Diversas</div>
-                        <div class="local">Quadras</div>
-                        <div class="equipes">Finalistas</div>
-                    </div>
-                    <div class="atividade">
-                        <div class="horario">10:15 - 12:00</div>
-                        <div class="esporte"><i class="fas fa-users sport-icon"></i>Gincanas</div>
-                        <div class="local">Campo</div>
-                        <div class="equipes">Todas</div>
-                    </div>
-                    <div class="atividade">
-                        <div class="horario">14:00 - 16:00</div>
-                        <div class="esporte"><i class="fas fa-medal sport-icon"></i>Cerimônia de Encerramento</div>
-                        <div class="local">Auditório</div>
-                        <div class="equipes">Premiação</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <a href="index.html" class=".return-hp">Voltar para página principal</a>
+  <header>
+    <div class="header-content">
+      <img src="Alagoas.png" alt="Logo IFAL" class="logo">
+      <h1>Histórico dos Jogos</h1>
     </div>
+  </header>
 
-    <footer>
-        <p>Jogos Internos 2025 - Todos os direitos reservados</p>
-    </footer>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="programacao.html">Programação</a>
+    <a href="modalidades.html">Modalidades</a>
+    <a href="equipes.html">Equipes</a>
+    <a href="historico.html">Histórico</a>
+  </nav>
+
+  <main class="container">
+    <h1>Campeões e Destaques Anteriores</h1>
+    <div class="cards">
+      <div class="card">
+        <h2><i class="fa-solid fa-calendar-alt"></i> 2024</h2>
+        <p><strong><i class="fa-solid fa-trophy"></i> Campeã Geral:</strong> 913</p>
+        <p><strong><i class="fa-solid fa-star"></i> Destaque:</strong> Equipe Feminina de Vôlei</p>
+      </div>
+
+      <div class="card">
+        <h2><i class="fa-solid fa-calendar-alt"></i> 2023</h2>
+        <p><strong><i class="fa-solid fa-trophy"></i> Campeã Geral:</strong> 412</p>
+        <p><strong><i class="fa-solid fa-star"></i> Destaque:</strong> Equipe Masculina de Futsal</p>
+      </div>
+
+      <div class="card">
+        <h2><i class="fa-solid fa-calendar-alt"></i> 2022</h2>
+        <p><strong><i class="fa-solid fa-trophy"></i> Campeã Geral:</strong> 923</p>
+        <p><strong><i class="fa-solid fa-star"></i> Destaque:</strong> Equipe Feminina de Handebol</p>
+      </div>
+
+      <div class="card">
+        <h2><i class="fa-solid fa-calendar-alt"></i> 2021</h2>
+        <p><strong><i class="fa-solid fa-trophy"></i> Campeã Geral:</strong> 921</p>
+        <p><strong><i class="fa-solid fa-star"></i> Destaque:</strong> Lucas Mendes (Xadrez)</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div>IFAL - Instituto Federal de Alagoas</div>
+    <div>Desenvolvido por: Letícia Vital, Maria Arielly, Maria Klara, Nicolly Correia e Rúbia Barbosa</div>
+    <div>&copy; 2025</div>
+  </footer>
+
 </body>
 </html>
