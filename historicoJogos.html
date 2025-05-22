@@ -1,21 +1,44 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Histórico dos Jogos Internos</title>
+  <title>Histórico dos Jogos</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Playfair Display', serif;
-      background-color: #ffedda;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
     }
 
     header {
       background-color: #541518;
-      color: white;
-      padding: 1rem;
+      color: #fff;
+      padding: 2rem 1rem;
       text-align: center;
+    }
+
+    header h1{
+      color: #f9f9f9;
+      justify-content: center;
+      align-self: center;
+    }
+
+    header img{
+      height: 80px;
+      width: 80px;
     }
 
     .header-content {
@@ -26,107 +49,113 @@
     }
 
     .logo {
-      height: 60px;
+      height: 130px;
       width: auto;
     }
 
     nav {
       display: flex;
       justify-content: center;
-      background-color: #902c2e;
-      padding: 0.5rem;
+      gap: 1.5rem;
+      background: #902c2e;
+      padding: 0.75rem 1rem;
     }
 
     nav a {
-      color: white;
-      margin: 0 1rem;
+      color: #fff;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd9b3;
     }
 
     .container {
-      padding: 2rem;
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 1rem;
     }
 
     h1 {
       text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    #titulo-historico {
+      margin-bottom: 2.5rem;
+      font-size: 2.5rem;
+      font-weight: 700;
       color: #541518;
-      font-size: 2rem;
-      text-shadow: 1px 1px 2px #00000050;
     }
 
     .cards {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
       gap: 2rem;
     }
 
     .card {
-      background-color: white;
-      border: 2px solid #7a0909;
-      border-radius: 8px;
-      box-shadow: 0 6px 10px rgba(136, 29, 29, 0.1);
+      background: #fff;
+      border-radius: 20px;
       padding: 2rem;
-      width: 90%;
-      max-width: 600px;
-      transition: transform 0.3s;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
     }
 
     .card:hover {
-      transform: scale(1.02);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     }
 
     .card h2 {
-      color: #541518;
-      margin-bottom: 0.5rem;
-      justify-content: space-between;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #902c2e;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .card h2 .fa-calendar-alt {
+      color: #902c2e;
     }
 
     .card p {
-      margin: 0.3rem 0;
+      margin: 0.5rem 0;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .card p strong {
+      min-width: 110px;
+      color: #541518;
+    }
+
+    .card p .fa-trophy {
+      color: #d4af37;
+    }
+
+    .card p .fa-star {
+      color: #f39c12;
     }
 
     footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #541518;
-      color: white;
-      padding: 1rem;
-      flex-wrap: wrap;
+      background: #541518;
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+      margin-top: 4rem;
     }
 
-    footer div {
-      margin: 0.5rem;
-    }
-
-    @media (max-width: 600px) {
-      .header-content {
-        flex-direction: column;
-      }
-
-      .cards {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      footer {
-        flex-direction: column;
-        text-align: center;
-      }
-    }
   </style>
 </head>
 <body>
+
   <header>
     <div class="header-content">
-      <img src="logoIF.png" alt="Logo IFAL" class="logo">
-      <h1>Histórico dos Jogos Internos</h1>
+      <img src="Alagoas.png" alt="Logo IFAL" class="logo">
+      <h1>Histórico dos Jogos</h1>
     </div>
   </header>
 
@@ -139,34 +168,30 @@
   </nav>
 
   <main class="container">
-    <h1 id="titulo-historico">Campeões e Destaques Anteriores</h1>
+    <h1>Campeões e Destaques Anteriores</h1>
     <div class="cards">
       <div class="card">
-        <h2>2024</h2>
-        <p><strong>Campeã Geral:</strong> 913</p>
-        <p><strong>Destaque:</strong> Maria Souza (Atletismo)</p>
-        <p><strong>Novidade:</strong> Inclusão do Beach Tennis</p>
+        <h2><i class="fa-solid fa-calendar-alt"></i> 2024</h2>
+        <p><strong><i class="fa-solid fa-trophy"></i> Campeã Geral:</strong> 913</p>
+        <p><strong><i class="fa-solid fa-star"></i> Destaque:</strong> Equipe Feminina de Vôlei</p>
       </div>
 
       <div class="card">
-        <h2>2023</h2>
-        <p><strong>Campeã Geral:</strong>412</p>
-        <p><strong>Destaque:</strong> João Lima (Futsal)</p>
-        <p><strong>Novidade:</strong> Torneio de E-Sports</p>
+        <h2><i class="fa-solid fa-calendar-alt"></i> 2023</h2>
+        <p><strong><i class="fa-solid fa-trophy"></i> Campeã Geral:</strong> 412</p>
+        <p><strong><i class="fa-solid fa-star"></i> Destaque:</strong> Equipe Masculina de Futsal</p>
       </div>
 
       <div class="card">
-        <h2>2022</h2>
-        <p><strong>Campeã Geral:</strong>923</p>
-        <p><strong>Destaque:</strong> Equipe Feminina de Handebol</p>
-        <p><strong>Novidade:</strong> Gincana cultural integrada</p>
+        <h2><i class="fa-solid fa-calendar-alt"></i> 2022</h2>
+        <p><strong><i class="fa-solid fa-trophy"></i> Campeã Geral:</strong> 923</p>
+        <p><strong><i class="fa-solid fa-star"></i> Destaque:</strong> Equipe Feminina de Handebol</p>
       </div>
 
       <div class="card">
-        <h2>2021</h2>
-        <p><strong>Campeã Geral:</strong> 921</p>
-        <p><strong>Destaque:</strong> Lucas Mendes (Xadrez)</p>
-        <p><strong>Novidade:</strong> Retorno pós-pandemia</p>
+        <h2><i class="fa-solid fa-calendar-alt"></i> 2021</h2>
+        <p><strong><i class="fa-solid fa-trophy"></i> Campeã Geral:</strong> 921</p>
+        <p><strong><i class="fa-solid fa-star"></i> Destaque:</strong> Lucas Mendes (Xadrez)</p>
       </div>
     </div>
   </main>
@@ -176,5 +201,6 @@
     <div>Desenvolvido por: Letícia Vital, Maria Arielly, Maria Klara, Nicolly Correia e Rúbia Barbosa</div>
     <div>&copy; 2025</div>
   </footer>
+
 </body>
-</html
+</html>
